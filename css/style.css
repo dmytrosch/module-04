@@ -1,58 +1,65 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-*,
+/* *,
 *::before,
-*::after{
+*::after {
     box-sizing: inherit;
-}
+} */
 
-.wrapper{
+.wrapper {
     width: 1170px;
     margin: 0 auto;
+    padding: 0;
     background-color: khaki;
 }
 
-body{
-    font-family: 'Roboto', 'Arial', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;   /* VA в фотошопе -20 */
+.clearfix::after{
+    display: table;
+    content: "";
+    clear: both;
 }
 
-.navigation-menu{
-    padding: 36px 30px;
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em; /* VA в фотошопе -20ед */
+}
+
+.navigation-menu {
+    padding: 36px 30px 0;
     margin: 0;
 }
 
-.navigation-item:nth-child(1){
+.navigation-item:nth-child(1) {
     margin-left: 10px;
     margin-right: 35px;
 }
 
-.navigation-item:nth-child(2){
+.navigation-item:nth-child(2) {
     margin-right: 38px;
 }
 
-.navigation-item:nth-child(3){
+.navigation-item:nth-child(3) {
     margin-right: 32px;
 }
 
-.navigation-item:nth-child(4){
+.navigation-item:nth-child(4) {
     margin-right: 28px;
 }
 
-.navigation-item:nth-child(5){
+.navigation-item:nth-child(5) {
     margin-right: 34px;
 }
 
-.site-logo{
+.site-logo {
     float: left;
     margin: 0;
     padding: 0;
 }
 
-.site-name{
+.site-name {
     margin: 0;
     padding: 0;
     font-weight: 300;
@@ -61,21 +68,22 @@ body{
     color: #555252;
 }
 
-h1::first-letter{
+h1::first-letter {
     font-weight: 900;
     color: #1abc9c;
 }
 
-.navigation-list{
+.navigation-list {
     float: right;
     margin: 12px auto;
     padding: 0;
 }
 
-.navigation-item{
+.navigation-item {
     float: left;
 }
-.navigation-item a{
+
+.navigation-item a {
     font-family: 'Open Sans', 'Arial', sans-serif;
     color: #0f0101;
     font-size: 14px;
@@ -84,105 +92,146 @@ h1::first-letter{
 
 }
 
-.navigation-item a:hover{
+.navigation-item a:hover {
     color: #1abc9c;
 }
 
-.featured-products{
-    margin: 0 30px;
+.header{
+    margin-bottom: 96px;
 }
 
-.product-block{
+section{
+    padding: 0 30px;
+}
+
+.product-block {
     float: left;
     margin-right: 30px;
 }
 
-.product-block:nth-child(-n+5){
+.product-block:nth-child(-n+5) {
     margin-bottom: 30px;
 }
 
-.product-block:nth-child(4n+1){
+.product-block:nth-child(4n+1) {
     margin-right: 0;
 }
 
-.product-block p{
+.product-block p {
     font-size: 18px;
     font-weight: 900;
     line-height: 32px;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
-h2{
+.product-block img{
+    height: 100%;;
+    width: 100%;
+}
+
+.product-item{
+    float: left;
+    margin: 0;
+    width: 201px;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 13px;
+    background-color: #323232;
+}
+
+.price{
+    float: right;
+    margin: 0;
+    width: 54px;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 12px;
+    background-color: #8c8c8c;
+}
+
+.product-block:hover .product-item{
+    background-color: #1abc9c;
+}
+
+.product-block:hover .price{
+    background-color: #7fd9c7;
+}
+
+.product-block:hover{
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
     font-size: 48px;
     line-height: 32px;
     font-weight: 900;
 }
 
-a{
+a {
     text-decoration: none;
     display: block;
 }
 
-.featured-products h2{
+.featured-products h2 {
     color: #515151;
 }
 
-.latest-news h2{
+.featured-products h2::after{
+    content: "";
+    display: block;
+    width: 164px;
+    height: 7px;
+    background-color: #1abc9c;
+    margin: 28px auto 8px auto;
+    padding: 0;
+}
+
+.latest-news h2 {
     color: #555252
 }
 
-ul{
+ul {
     list-style-type: none;
 }
-  
-  img{
-    display: block;
-    min-height: 100%;
-    height: auto;
-  }
-  
-  p{
-    /* display: inline-block; */
-  }
 
-  .articles{
+img {
+    display: block;
+    /* min-height: 100%;
+    height: auto; */
+}
+
+.articles {
     font-family: 'Open Sans', 'Arial', sans-serif;
     color: #555252;
-  }
+}
 
-   h3{
-       font-weight: 600;
-       font-size: 18px;
-       line-height: 26px;
-       text-transform: none;   
-   }
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+}
 
-   .articles p{
-       font-weight: 400;
-       font-size: 14px;
-       line-height: 26px;
-       text-transform: none;
-   }
+.articles p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: none;
+}
 
-   .button-link{
+.button-link {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
     color: #ffffff;
-   }
+}
 
-   button{
-       background: #1abc9c;
-       border-radius: 3px;
-       display: block;
-       border: 1px solid #1abc9c;
-   }
-
-   .clearfix::after{
-       display: table;
-       content: "";
-       clear: both;
-
-   }
-   
+button {
+    background: #1abc9c;
+    border-radius: 3px;
+    display: block;
+    border: 1px solid #1abc9c;
+}
