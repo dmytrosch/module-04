@@ -33,23 +33,10 @@ body {
 
 .navigation-item:nth-child(1) {
     margin-left: 10px;
-    margin-right: 35px;
 }
 
-.navigation-item:nth-child(2) {
-    margin-right: 38px;
-}
-
-.navigation-item:nth-child(3) {
-    margin-right: 32px;
-}
-
-.navigation-item:nth-child(4) {
-    margin-right: 28px;
-}
-
-.navigation-item:nth-child(5) {
-    margin-right: 34px;
+.navigation-item:nth-child(6) {
+    margin-right: 0;
 }
 
 .site-logo {
@@ -74,11 +61,12 @@ h1::first-letter {
 
 .navigation-list {
     float: right;
-    margin: 12px auto;
+    margin: 0;
     padding: 0;
 }
 
 .navigation-item {
+    margin-right: 38px;
     float: left;
 }
 
@@ -100,20 +88,27 @@ h1::first-letter {
 }
 
 .featured-products{
-    padding: 0 30px;
-    margin-bottom: 96px;
+    padding: 0 30px 96px 30px;
+    /* margin-bottom: 96px; */
+}
+
+.block-list{
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .product-block {
     float: left;
     margin-right: 30px;
+    margin-bottom: 0;
 }
 
-.product-block:nth-child(-n+5) {
+.product-block:nth-child(-n+4) {
     margin-bottom: 30px;
 }
 
-.product-block:nth-child(4n+1) {
+.product-block:nth-child(4n) {
     margin-right: 0;
 }
 
@@ -163,7 +158,7 @@ h1::first-letter {
 
 h2 {
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 8px auto;
     font-size: 48px;
     line-height: 32px;
     font-weight: 900;
@@ -184,13 +179,13 @@ a {
     width: 164px;
     height: 7px;
     background-color: #1abc9c;
-    margin: 28px auto 8px auto;
+    margin: 28px auto auto auto;
     padding: 0;
 }
 
 .latest-news{
-    padding: 0 30px;
-    margin-bottom: 45px;
+    padding: 0 30px 45px 30px;
+    /* margin-bottom: 45px; */
 }
 
 .latest-news h2 {
@@ -224,7 +219,6 @@ img{
 
 .articles{
     width: 350px;
-    height: 100%;
     margin-right: 30px;
     float: left;
     font-family: 'Open Sans', 'Arial', sans-serif;
@@ -244,7 +238,7 @@ h3{
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
-    margin: 0 47px 0 0;
+    margin: 0 47px 24px 0;
     padding: 0;
 
 }
@@ -255,7 +249,7 @@ h3::after{
     width: 136px;
     height: 3px;
     background-color: #4ec6ab;
-    margin: 10px auto 24px 0;
+    margin: 10px auto auto 0;
 
 }
 
@@ -275,9 +269,6 @@ h3::after{
     line-height: 26px;
     font-weight: 300;
     color: #ffffff;
-}
-
-button{
     width: 158px;
     height: 50px;
     padding: 0;
@@ -285,4 +276,9 @@ button{
     border-radius: 3px;
     display: block;
     border: 1px solid #1abc9c;
+    margin: 0;
+    text-align: center;
+    padding-top: 10px;
+    text-transform: none;
 }
+
